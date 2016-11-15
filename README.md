@@ -1,4 +1,4 @@
-# trashNazi
+# trashr
 
 ###https://app.moqups.com/gliechty/n3lLJpnZYb/edit/page/a8e3f8202
 
