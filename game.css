@@ -1,0 +1,67 @@
+* {
+	font-family: 'Amatic SC', cursive;
+}
+html {
+	background: url("photos/game_background.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+.score {
+	font-size: 40px;
+	color: white;
+	width: 45%;
+	float: left;
+}
+#qty {
+	font-size: 40px;
+	width: 100px;
+}
+h1 {
+	float: left;
+	font-size: 60px;
+	color: white;
+	margin: 0 auto;
+}
+#board {
+	clear: both;
+	height: auto;
+	width: 80%;
+	margin: 10% 10% 0 10%;
+	border: 1px solid red;
+	display: block;
+}
+#screen {
+	height: 500px;
+/*	border: 1px solid blue;*/
+}
+#can {
+	height: 150px;
+	margin-left: 45%;
+	position: absolute;
+	margin-top: -5%;
+}
+.trash {
+	height: 40px;
+	width: 40px;
+	background-color: red;
+	color: white;
+	text-align: center;
+	padding-top: auto auto;
+	border-radius: 20px;
+}
+
+@keyframes drop {
+	0% {
+		position: absolute;
+		top: 10%; 
+	}
+	100% {
+		position: absolute;
+		top: 100%;
+	}
+}
+.animated {
+	animation-name: drop;
+	animation-duration: 5s;
+	animation-delay: 0s;
+	animation-timing-function: linear;
+}
