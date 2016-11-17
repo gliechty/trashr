@@ -16,24 +16,25 @@ function mkTrash(){
 	trash.innerHTML=("trash");
 	trash.setAttribute('class', 'trash');
 	trash.className += ' animated';
-	trash.style.marginLeft=(Math.random() * 90)+"%";
+	trash.style.marginLeft=(Math.random() * 100)+"%"; 
+    // change above line back to 90 and %
 	var screen = document.getElementById("screen");
 	screen.appendChild(trash);
 }
 mkTrash();
 
 // creates trash at regular interval
+
 // window.setInterval(function(){
 //   mkTrash();
-// }, 3000);
+// }, 5000);
 
 // function mvTrashDown(){
 // 	console.log("it's getting called");
 // 	var trashArray = document.getElementsByClassName('trash');
 // 	console.log(trashArray);
 // 	trash = trashArray[0];
-
-// 	// trash.style.display= "absolute";
+// 	trash.style.display= "absolute";
 // 	var count=0;
 // 	console.log("counting "+count);
 // 	while (count<=5){
@@ -44,6 +45,7 @@ mkTrash();
 // 		setTimeout(mvTrashDown, 1000);
 // 	}
 // }
+// mvTrashDown();
 
 // (function move() {
 //     var character=document.getElementById("character");
@@ -62,13 +64,14 @@ mkTrash();
 
 
 // checks top margin to remove trash 
-function rmTrash() {
-	var trash = document.getElementsByTagName("div");
-	// var trash = document.getElementsByClassName("trash");
-	var trashItem = trash[0];
-	console.log(trashItem);
-	trashItem.addEventListener('webkitAnimationEnd', function(event){trashItem.style.display = 'none';});
-}
+
+// function rmTrash() {
+// 	var trash = document.getElementsByTagName("div");
+// 	// var trash = document.getElementsByClassName("trash");
+// 	var trashItem = trash[0];
+// 	console.log(trashItem);
+// 	trashItem.addEventListener('webkitAnimationEnd', function(event){trashItem.style.display = 'none';});
+// }
 
 // window.setInterval(function(){
 //   rmTrash();
@@ -89,18 +92,18 @@ function rmTrash() {
 // manipulate animations with event listener
 
 document.addEventListener('keydown', function(event) {
-	console.log("working");
     //left
-    // var trashArray = document.getElementsByClassName('trash');
-    // var trash=trashArray[0];
-    // console.log(trash);
+    var trashArray = document.getElementsByClassName('trash');
+    var trash=trashArray[0];
+    console.log(trash);
     if (event.keyCode === 37) {
         console.log('left');
-        // console.log(trash.style.left);
-        // trash.style.marginLeft = "0px";
+        console.log(trash.style.marginLeft);
+        trash.style.marginLeft = (parseInt(trash.style.marginLeft)*.9)+"%";
         // console.log(trash.style.left);
     } else if (event.keyCode === 39) {
     	console.log('right');
+        trash.style.marginLeft = (parseInt(trash.style.marginLeft)*1.1)+"%";
     	// console.log(trash.style.left);
      //    trash.style.left = trash.style.left + 10 + "px";
 	}
