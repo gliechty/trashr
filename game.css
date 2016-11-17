@@ -41,17 +41,24 @@ h1 {
 	height: 150px;
 	margin-left: 45%;
 	position: absolute;
-	margin-top: -5%;
+	margin-top: 0%;
 }
 /*each piece of falling trash*/
-.trash {
+
+/*.trash {
 	height: 40px;
-	width: 40px;
-	background-color: red;
-	color: white;
+	width: 40px;*/
+/*	color: white;
 	text-align: center;
-	padding-top: auto auto;
-	border-radius: 20px;
+	padding-top: auto auto;*/
+	/*background: url("photos/beer_can.png") no-repeat center center;
+	background-size: 40px 40px;*/
+/*}*/
+div.trash {
+	background: url("photos/beer_can.png") no-repeat center center;
+	background-size: 30px 60px;
+	height: 60px;
+	width: 30px;
 }
 /*animation for dropping trash*/
 @keyframes drop {

@@ -13,7 +13,7 @@
 
 function mkTrash(){
 	var trash = document.createElement("div");
-	trash.innerHTML=("trash");
+	// trash.innerHTML=("trash");
 	trash.setAttribute('class', 'trash');
 	trash.className += ' animated';
 	trash.style.marginLeft=(Math.random() * 100)+"%"; 
