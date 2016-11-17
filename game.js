@@ -9,7 +9,6 @@
 // button to start game
 
 
-
 // creates trash @random position in container
 
 function mkTrash(){
@@ -17,7 +16,7 @@ function mkTrash(){
 	trash.innerHTML=("trash");
 	trash.setAttribute('class', 'trash');
 	trash.className += ' animated';
-	trash.style.marginLeft=(Math.random() * 800)+"px"; 
+	trash.style.marginLeft=(Math.random() * 100)+"%"; 
     // change above line back to 90 and %
 	var screen = document.getElementById("screen");
 	screen.appendChild(trash);
@@ -33,6 +32,7 @@ window.setInterval(function(){
 
 // Checks if trashItems ![] 
 // removes first child if there are multiple
+
 function rmTrash(){
     var trashItems=document.getElementsByClassName('trash');
     var firstChild=trashItems[0];
@@ -54,18 +54,31 @@ document.addEventListener('keydown', function(event) {
         if (event.keyCode === 37) {
             console.log('left');
             // console.log(trash.style.marginLeft);
-            trashArray[i].style.marginLeft = (parseInt(trashArray[i].style.marginLeft)-30)+"px";
+            trashArray[i].style.marginLeft = (parseInt(trashArray[i].style.marginLeft)-2)+"%";
             // console.log(trash.style.left);
         } else if (event.keyCode === 39) {
         	console.log('right');
-            trashArray[i].style.marginLeft = (parseInt(trashArray[i].style.marginLeft)+30)+"px";
-        	// console.log(trash.style.left);
-         //    trash.style.left = trash.style.left + 10 + "px";
+            trashArray[i].style.marginLeft = (parseInt(trashArray[i].style.marginLeft)+2)+"%";
     	}
     }
 });
 
 // create win/pass condition
+var points = 0;
+function chkPoints(){
+    var trashArray = document.getElementsByClassName('trash');
+    console.log(trashArray[0]);
+    if (parseInt(trashArray[0].style.marginLeft)>34 && parseInt(trashArray[0].style.marginLeft)<41){
+        points+=1;
+        console.log(points);
+        document.getElementById("qty").value=points.toString();
+    } else {
+        points-=1;
+        console.log(points);
+        document.getElementById("qty").value=points.toString();
+    }
+}
+setInterval(function(){chkPoints();}, 5000);
 
 // function isWin(){
 

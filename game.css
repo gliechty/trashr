@@ -16,6 +16,8 @@ html {
 #qty {
 	font-size: 40px;
 	width: 100px;
+	text-align: center;
+	font-weight: bolder;
 }
 /*Level 1*/
 h1 {
@@ -29,7 +31,6 @@ h1 {
 	height: auto;
 	width: 80%;
 	margin: 10% 10% 0 10%;
-	border: 1px solid red;
 	display: block;
 }
 #screen {
@@ -42,6 +43,7 @@ h1 {
 	position: absolute;
 	margin-top: -5%;
 }
+/*each piece of falling trash*/
 .trash {
 	height: 40px;
 	width: 40px;
