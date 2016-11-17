@@ -31,37 +31,18 @@ window.setInterval(function(){
 }, 5000);
 
 
+// Checks if trashItems ![] 
+// removes first child if there are multiple
+function rmTrash(){
+    var trashItems=document.getElementsByClassName('trash');
+    var firstChild=trashItems[0];
+    var screen=document.getElementById("screen");
+    if (trashItems.length>1){
+        screen.removeChild(firstChild);
+    }
+}
+setInterval(function(){rmTrash();}, 50);
 
-// window.setInterval(function(){
-// 	mvTrashDown();
-// }, 1000);
-
-
-// checks top margin to remove trash 
-
-// function rmTrash() {
-// 	var trash = document.getElementsByTagName("div");
-// 	// var trash = document.getElementsByClassName("trash");
-// 	var trashItem = trash[0];
-// 	console.log(trashItem);
-// 	trashItem.addEventListener('webkitAnimationEnd', function(event){trashItem.style.display = 'none';});
-// }
-
-// window.setInterval(function(){
-//   rmTrash();
-// }, 1000);
-
-
-// rmTrash();
-// function rmTrash(){
-// 	trashItems=document.getElementsByClassName('animated');
-// 	console.log(trashItems);
-// 	for (i=0;i<trashItems.length;i++){
-// 		if (trashItems[i].style.marginTop>=100%){
-// 			trashItems[i].style.display="none";
-// 		}
-// 	}
-// }
 
 // manipulate animations with event listener
 
