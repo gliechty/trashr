@@ -5,16 +5,19 @@ html {
 	background: url("photos/game_background.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
+/*wrapper for Score*/
 .score {
 	font-size: 40px;
 	color: white;
 	width: 45%;
 	float: left;
 }
+/*Label for the Score*/
 #qty {
 	font-size: 40px;
 	width: 100px;
 }
+/*Level 1*/
 h1 {
 	float: left;
 	font-size: 60px;
@@ -48,17 +51,21 @@ h1 {
 	padding-top: auto auto;
 	border-radius: 20px;
 }
-
+/*animation for dropping trash*/
 @keyframes drop {
 	0% {
 		position: absolute;
-		top: 10%; 
+		/*top: 10%; */
+		margin-top: 0px;
 	}
 	100% {
 		position: absolute;
-		top: 100%;
+		/*top: 100%;*/
+		margin-top: 500px;
+		display: none;
 	}
 }
+/*activates animation*/
 .animated {
 	animation-name: drop;
 	animation-duration: 5s;
