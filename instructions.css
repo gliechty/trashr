@@ -1,0 +1,42 @@
+html {
+	background-image: url("photos/landing_background.jpg");
+}
+h1 {
+	color: white;
+	text-align: center;
+	margin: 50px auto 0px auto;
+	font-family: 'Amatic SC', cursive;
+	font-weight: 400;
+	font-size: 150px
+}
+h2 {
+	color: white;
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	font-size: 40px;
+	margin: 30px auto;
+	font-weight: 200;
+}
+ul {
+	font-family: 'Amatic SC', cursive;
+	color: white;
+	font-size: 24px;
+	text-align: center;
+}
+p {
+	font-family: 'Amatic SC', cursive;
+	color: white;
+	font-size: 24px;
+	text-align: center;
+}
+#can{
+	height: 160px;
+	margin: 0 auto;
+	transition: all 1s ease;
+}
+.can-container {
+	text-align: center;
+}
+#can:hover {
+	height: 180px;
+}

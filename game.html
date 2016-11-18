@@ -13,14 +13,40 @@
 			<input id="qty" value="0"/>
 		</section>
 		<h1>Level 1</h1>
+		<section class="timer">
+			<label for="time"><abbr title="Time">Time</abbr></label>
+			<input id="time" value="0"/>
+		</section>
 	</header>
 
 	<!-- create a board -->
 	<section id="board">
-		<section id="screen"></section>
+		<section id="screen">
+			<!-- <div id="message"></div> -->
+		</section>
 	</section>
 	<!-- footer with can -->
 	<img src="photos/landing_can.png" id="can">
+	
+	<!-- win modal -->
+	<div id="winModal" class="modal">
+		<div class="modal-content">
+			<h2>You recycle good.</h2>
+				<form method="get" action="file:///Users/guyliechty/Desktop/WDI/Projectwork/project1/trashr/instructions.html">
+					<button class="winButton" type="submit">Damn Str8</button>
+				</form>
+		</div>
+	</div>
+	<!-- lose modal -->
+	<div id="loseModal" class="modal">
+		<div class="modal-content">
+			<h2>Your recycling impresses no one.</h2>
+				<form method="get" action="file:///Users/guyliechty/Desktop/WDI/Projectwork/project1/trashr/instructions.html">
+					<button class="loseButton" type="submit">I know...</button>
+				</form>
+		</div>
+	</div>
+	<!-- close modal -->
 	<script type="text/javascript" src="game.js"></script>
 </body>
 </html>
