@@ -130,4 +130,3 @@ function isWin(){
 
 // // sets length of game
 setInterval(function(){isWin();}, 60000);
-

@@ -13,21 +13,21 @@ h2 {
 	color: white;
 	text-align: center;
 	font-family: 'Amatic SC', cursive;
-	font-size: 40px;
-	margin: 30px auto;
+	font-size: 48px;
 	font-weight: 200;
 }
 ul {
 	font-family: 'Amatic SC', cursive;
 	color: white;
-	font-size: 24px;
+	font-size: 48px;
 	text-align: center;
 }
 p {
 	font-family: 'Amatic SC', cursive;
 	color: white;
-	font-size: 24px;
+	font-size: 30px;
 	text-align: center;
+	margin: 0 auto;
 }
 #can{
 	height: 160px;
