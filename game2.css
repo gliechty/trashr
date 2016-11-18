@@ -58,20 +58,34 @@ h1 {
 }
 
 /*recepticle*/
+#bin{
+	width: 10%;
+	height: auto;
+	margin-left: 30%;
+	position: absolute;
+	margin-top: 0%;
+}
 #can {
 	width: 10%;
 	height: auto;
-	margin-left: 45%;
+	margin-left: 55%;
 	position: absolute;
 	margin-top: 0%;
 }
 
-/*each piece of falling trash*/
-div.trash {
+/*each piece of recycle trash*/
+div.trash.recycle {
 	background: url("photos/beer_can.png") no-repeat center center;
 	background-size: 30px 60px;
 	height: 60px;
 	width: 30px;
+}
+/*each piece of garbage trash*/
+div.trash.garbage {
+	background: url("photos/garbage_bag.png") no-repeat center center;
+	background-size: 50px 50px;
+	height: 50px;
+	width: 50px;
 }
 
 /*pop up messages*/

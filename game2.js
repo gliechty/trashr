@@ -12,14 +12,29 @@ setInterval(function(){countdown();}, 1000);
 
 // creates trash @random position in container
 function mkTrash(){
-	var trash = document.createElement("div");
-	// trash.innerHTML=("trash");
-	trash.setAttribute('class', 'trash');
-	trash.className += ' animated';
-	trash.style.marginLeft=(Math.random() * 100)+"%"; 
-    // change above line back to 90 and %
-	var screen = document.getElementById("screen");
-	screen.appendChild(trash);
+    // two types of waste- 1 recycle and 2 garbage
+    var type = Math.ceil(Math.random()*2);
+    if (type === 1){
+        var trash = document.createElement("div");
+        trash.setAttribute('class', 'trash');
+        trash.className += ' animated';
+        // gives the class name recycle
+        trash.className += ' recycle';
+        console.log(trash);
+        trash.style.marginLeft=(Math.random() * 100)+"%"; 
+        var screen = document.getElementById("screen");
+        screen.appendChild(trash);
+    } else if (type === 2){
+        var trash = document.createElement("div");
+        trash.setAttribute('class', 'trash');
+        trash.className += ' animated';
+        // gives the class name garbage
+        trash.className += ' garbage';
+        console.log(trash);
+        trash.style.marginLeft=(Math.random() * 100)+"%"; 
+        var screen = document.getElementById("screen");
+        screen.appendChild(trash);
+    }
 }
 mkTrash();
 
@@ -71,32 +86,56 @@ document.addEventListener('keydown', function(event) {
 // sets points and messages
 var points = 0;
 function chkPoints(){
-    var trashArray = document.getElementsByClassName('trash');
-    if (parseInt(trashArray[0].style.marginLeft)>=34 && parseInt(trashArray[0].style.marginLeft)<=41){
-        points+=1;
-        document.getElementById("qty").value=points.toString();
-        if (points%2===0){
-            console.log("Noice!");
-            var message=document.createElement("div");
-            message.innerHTML="Noice!";
-            message.setAttribute('class', 'message');
-            message.className += ' fade';
-            var screen=document.getElementById("screen");
-            screen.appendChild(message);
-        } else if (points%5===0 && points>=5){
-            console.log("Baller!!");
-            var message=document.createElement("div");
-            message.innerHTML="Baller!";
-            message.setAttribute('class', 'message');
-            message.className += ' fade';
-            var screen=document.getElementById("screen");
-            screen.appendChild(message);
+    var recycleArray = document.getElementsByClassName('recycle');
+    var garbageArray = document.getElementsByClassName('garbage');
+    console.log(recycleArray[0]);
+    console.log(garbageArray[0]);
+    if (recycleArray.length>0){
+        console.log(recycleArray[0].style.marginLeft);
+        if (parseInt(recycleArray[0].style.marginLeft)>=20 && parseInt(recycleArray[0].style.marginLeft)<=30){
+            points+=1;
+            document.getElementById("qty").value=points.toString();
+            if (points%2===0){
+                var message=document.createElement("div");
+                message.innerHTML="Noice!";
+                message.setAttribute('class', 'message');
+                message.className += ' fade';
+                var screen=document.getElementById("screen");
+                screen.appendChild(message);
+            } else if (points%5===0 && points>=5){
+                var message=document.createElement("div");
+                message.innerHTML="Baller!";
+                message.setAttribute('class', 'message');
+                message.className += ' fade';
+                var screen=document.getElementById("screen");
+                screen.appendChild(message);
+            }
+        }
+    } else if (garbageArray.length>0){
+        console.log(garbageArray[0].style.marginLeft);
+        if (parseInt(garbageArray[0].style.marginLeft)>=40 && parseInt(garbageArray[0].style.marginLeft)<=50){
+            points+=1;
+            document.getElementById("qty").value=points.toString();
+            if (points%2===0){
+                var message=document.createElement("div");
+                message.innerHTML="Noice!";
+                message.setAttribute('class', 'message');
+                message.className += ' fade';
+                var screen=document.getElementById("screen");
+                screen.appendChild(message);
+            } else if (points%5===0 && points>=5){
+                var message=document.createElement("div");
+                message.innerHTML="Baller!";
+                message.setAttribute('class', 'message');
+                message.className += ' fade';
+                var screen=document.getElementById("screen");
+                screen.appendChild(message);
+            }
         }
     } else {
-        points-=1;
+        points= points-1;
         document.getElementById("qty").value=points.toString();
         if (points%2===0){
-            console.log("what's wrong with you??");
             var message=document.createElement("div");
             message.innerHTML=("What's wrong with you?");
             message.setAttribute('class', 'message');
@@ -104,7 +143,6 @@ function chkPoints(){
             var screen=document.getElementById("screen");
             screen.appendChild(message);
         } else if (points%3===0){
-            console.log("are you high??");
             var message=document.createElement("div");
             message.innerHTML=("Are You High?");
             message.setAttribute('class', 'message');
@@ -128,5 +166,7 @@ function isWin(){
 
 }
 
-// // sets length of game
+// // sets length of game (must be equal to first var 'time')
 setInterval(function(){isWin();}, 60000);
+
+

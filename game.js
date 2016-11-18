@@ -72,7 +72,7 @@ document.addEventListener('keydown', function(event) {
 var points = 0;
 function chkPoints(){
     var trashArray = document.getElementsByClassName('trash');
-    if (parseInt(trashArray[0].style.marginLeft)>=34 && parseInt(trashArray[0].style.marginLeft)<=41){
+    if (parseInt(trashArray[0].style.marginLeft)>=35 && parseInt(trashArray[0].style.marginLeft)<=45){
         points+=1;
         document.getElementById("qty").value=points.toString();
         if (points%2===0){
