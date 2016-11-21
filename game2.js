@@ -3,7 +3,7 @@
 var time = 60;
 document.getElementById("time").value=time.toString()+" sec";
 function countdown(){
-    if (time>=0){
+    if (time>=1){
         time -=1;
         document.getElementById("time").value=time.toString()+" sec";
     }
