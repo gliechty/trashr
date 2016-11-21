@@ -72,12 +72,12 @@ document.addEventListener('keydown', function(event) {
     // console.log(trashArray);
         if (event.keyCode === 37) {
             // shows left margin for debugging initial drop
-            // console.log(trashArray[0].style.marginLeft);
+            console.log(trashArray[0].style.marginLeft);
 
             trashArray[0].style.marginLeft = (parseInt(trashArray[0].style.marginLeft)-2)+"%";
         } else if (event.keyCode === 39) {
             // shows left margin for debugging intitial drop
-            // console.log(trashArray[0].style.marginLeft);
+            console.log(trashArray[0].style.marginLeft);
 
             trashArray[0].style.marginLeft = (parseInt(trashArray[0].style.marginLeft)+2)+"%";
     }
