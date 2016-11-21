@@ -4,6 +4,8 @@
 
 ###https://trello.com/b/CbhKHcpc/project-1
 
+###link: https://gliechty.github.io/trashr/
+
 ##By Guy Liechty, WDI 2016
 
 ##Trashr is a behavioral enforcement gaming module in which users manipulate cascading trash items into the proper receptacles. 
