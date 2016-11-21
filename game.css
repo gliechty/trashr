@@ -5,6 +5,13 @@ html {
 	background: url("photos/game_background.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
+/*home button*/
+#home {
+	width: 150px;
+	font-size: 40px;
+	text-align: center;
+	font-weight: bolder;
+}
 /*wrapper for Score*/
 .score {
 	font-size: 40px;
