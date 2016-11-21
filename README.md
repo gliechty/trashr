@@ -6,6 +6,8 @@
 
 ##By Guy Liechty, WDI 2016
 
+###https://gliechty.github.io/trashr/
+
 ##Trashr is a behavioral enforcement gaming module in which users manipulate cascading trash items into the proper receptacles. 
 
 ##Trash items are created in the DOM every 5 seconds and animated with CSS animations. Their initial position is determined with a randomized margin calculation via a js function, and the css animation transfers their position from 0 to 500px down. 
