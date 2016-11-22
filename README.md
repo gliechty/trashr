@@ -14,4 +14,6 @@
 
 ##an event listener allows users to manipulate the trajectory of the trash items left or right, using the arrow keys. A runnning score is calculated using a setTimeout function that measures the left margin of an object at the end of its animated trajectory. A running timer counts the score and determines whether a user passes a level when the full time has elapsed. Trash items are removed from the DOM after they finish their trajectory, ie when another item is created (in Level 1, every 5 seconds.) If a user is unable to achieve a minimum score during the time alotted, they are redirected to the instruction page via a link on a pop-up modal. 
 
+##To improve: many bugs in level 2. Need to fix them. Also, in level 1 the first drop is always a lose. Need to fix that too. 
+
 

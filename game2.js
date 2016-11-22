@@ -159,6 +159,7 @@ function isWin(){
     if (points>=10){
         var winModal = document.getElementById("winModal");
         winModal.style.display = "block";
+        
     } else {
         var loseModal = document.getElementById("loseModal");
         loseModal.style.display = "block";

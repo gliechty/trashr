@@ -16,7 +16,7 @@ function mkTrash(){
 	// trash.innerHTML=("trash");
 	trash.setAttribute('class', 'trash');
 	trash.className += ' animated';
-	trash.style.marginLeft=(Math.random() * 100)+"%"; 
+	trash.style.marginLeft=(Math.random() * 90)+"%"; 
     // change above line back to 90 and %
 	var screen = document.getElementById("screen");
 	screen.appendChild(trash);
@@ -57,22 +57,26 @@ document.addEventListener('keydown', function(event) {
     // console.log(trashArray);
         if (event.keyCode === 37) {
             // shows left margin for debugging initial drop
-            // console.log(trashArray[0].style.marginLeft);
-
+            console.log(trashArray[0].style.marginLeft);
             trashArray[0].style.marginLeft = (parseInt(trashArray[0].style.marginLeft)-2)+"%";
         } else if (event.keyCode === 39) {
             // shows left margin for debugging intitial drop
-            // console.log(trashArray[0].style.marginLeft);
-
+            console.log(trashArray[0].style.marginLeft);
             trashArray[0].style.marginLeft = (parseInt(trashArray[0].style.marginLeft)+2)+"%";
     }
 });
+
+var win1=document.getElementById("win1");
+function playWin1(){
+    win1.play();
+}
 
 // sets points and messages
 var points = 0;
 function chkPoints(){
     var trashArray = document.getElementsByClassName('trash');
-    if (parseInt(trashArray[0].style.marginLeft)>=35 && parseInt(trashArray[0].style.marginLeft)<=45){
+    // next line determines width of win state
+    if (parseInt(trashArray[0].style.marginLeft)>=36 && parseInt(trashArray[0].style.marginLeft)<=44){
         points+=1;
         document.getElementById("qty").value=points.toString();
         if (points%2===0){
@@ -83,6 +87,7 @@ function chkPoints(){
             message.className += ' fade';
             var screen=document.getElementById("screen");
             screen.appendChild(message);
+            playWin1();
         } else if (points%5===0 && points>=5){
             console.log("Baller!!");
             var message=document.createElement("div");
@@ -91,6 +96,8 @@ function chkPoints(){
             message.className += ' fade';
             var screen=document.getElementById("screen");
             screen.appendChild(message);
+            // var win1=document.getElementById("win1");
+            // win1.play();
         }
     } else {
         points-=1;
@@ -121,6 +128,7 @@ function isWin(){
     if (points>=10){
         var winModal = document.getElementById("winModal");
         winModal.style.display = "block";
+        document.getElementById("win").play();
     } else {
         var loseModal = document.getElementById("loseModal");
         loseModal.style.display = "block";
