@@ -19,7 +19,7 @@ html {
 .score {
 	font-size: 40px;
 	color: white;
-	width: 45%;
+	width: 20%;
 	float: left;
 }
 /*Label for the Score*/
@@ -34,8 +34,8 @@ html {
 .timer {
 	font-size: 40px;
 	color: white;
-	width: 45%;
-	float: left;
+	/*width: 20%;*/
+	float: right;
 	text-align: right;
 }
 
