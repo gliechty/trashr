@@ -9,11 +9,30 @@ html {
 /*Home button*/
 #home {
 	background-color: #fefefe;
+    margin: 0; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: auto; /* Could be more or less, depending on screen size */
+	text-align: center;
+	font-size: 48px;
+}
+#home-button{
+	width: 200px;
+	margin: 0px;
+	display: inline-block;
+}
+#next{
+	background-color: #fefefe;
     margin: 0 auto; /* 15% from the top and centered */
     border: 1px solid #888;
     width: auto; /* Could be more or less, depending on screen size */
 	text-align: center;
 	font-size: 48px;
+	float: right;
+}
+#next-button{
+	width: 200px;
+	margin: 0px;
+	float: right;
 }
 /*wrapper for Score*/
 .score {
