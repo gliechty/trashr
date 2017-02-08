@@ -133,7 +133,7 @@ function chkPoints(){
             }
         }
     } else {
-        points= points-1;
+        points-=1;
         document.getElementById("qty").value=points.toString();
         if (points%2===0){
             var message=document.createElement("div");
@@ -152,7 +152,7 @@ function chkPoints(){
         }
     }
 }
-setInterval(function(){chkPoints();}, 5000);
+setInterval(function(){chkPoints();}, 4999);
 
 // launches a win or lose modal
 function isWin(){

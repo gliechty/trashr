@@ -13,7 +13,7 @@ setInterval(function(){countdown();}, 1000);
 // creates trash @random position in container
 function mkTrash(){
 	var trash = document.createElement("div");
-	// trash.innerHTML=("trash");
+
 	trash.setAttribute('class', 'trash');
 	trash.className += ' animated';
 	trash.style.marginLeft=(Math.random() * 90)+"%"; 
@@ -74,10 +74,13 @@ function playWin1(){
 // sets points and messages
 var points = 0;
 function chkPoints(){
+
     var trashArray = document.getElementsByClassName('trash');
     // next line determines width of win state
-    if (parseInt(trashArray[0].style.marginLeft)>=36 && parseInt(trashArray[0].style.marginLeft)<=44){
+    console.log(parseFloat(trashArray[0].style.marginLeft));
+    if ((parseFloat(trashArray[0].style.marginLeft)>36) && (parseFloat(trashArray[0].style.marginLeft)<44)){
         points+=1;
+        console.log(trashArray[0].style.marginLeft);
         document.getElementById("qty").value=points.toString();
         if (points%2===0){
             console.log("Noice!");
@@ -87,7 +90,6 @@ function chkPoints(){
             message.className += ' fade';
             var screen=document.getElementById("screen");
             screen.appendChild(message);
-            playWin1();
         } else if (points%5===0 && points>=5){
             console.log("Baller!!");
             var message=document.createElement("div");
@@ -103,7 +105,7 @@ function chkPoints(){
         points-=1;
         document.getElementById("qty").value=points.toString();
         if (points%2===0){
-            console.log("what's wrong with you??");
+
             var message=document.createElement("div");
             message.innerHTML=("What's wrong with you?");
             message.setAttribute('class', 'message');
@@ -111,7 +113,7 @@ function chkPoints(){
             var screen=document.getElementById("screen");
             screen.appendChild(message);
         } else if (points%3===0){
-            console.log("are you high??");
+
             var message=document.createElement("div");
             message.innerHTML=("Are You High?");
             message.setAttribute('class', 'message');
@@ -121,7 +123,7 @@ function chkPoints(){
         }
     }
 }
-setInterval(function(){chkPoints();}, 5000);
+setInterval(function(){chkPoints();}, 4999);
 
 // launches a win or lose modal
 function isWin(){
