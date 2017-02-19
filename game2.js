@@ -62,7 +62,7 @@ function rmMessage(){
     var screen=document.getElementById("screen");
     screen.removeChild(firstMessage);
 }
-setInterval(function(){rmMessage();}, 5000);
+setInterval(function(){rmMessage();}, 4999);
 
 
 // manipulate animations with event listener
@@ -136,6 +136,7 @@ function chkPoints(){
         points-=1;
         document.getElementById("qty").value=points.toString();
         if (points%2===0){
+
             var message=document.createElement("div");
             message.innerHTML=("What's wrong with you?");
             message.setAttribute('class', 'message');
@@ -143,6 +144,7 @@ function chkPoints(){
             var screen=document.getElementById("screen");
             screen.appendChild(message);
         } else if (points%3===0){
+            
             var message=document.createElement("div");
             message.innerHTML=("Are You High?");
             message.setAttribute('class', 'message');

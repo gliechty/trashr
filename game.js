@@ -47,7 +47,7 @@ function rmMessage(){
     var screen=document.getElementById("screen");
     screen.removeChild(firstMessage);
 }
-setInterval(function(){rmMessage();}, 5000);
+setInterval(function(){rmMessage();}, 4999);
 
 
 // manipulate animations with event listener
